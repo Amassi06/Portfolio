@@ -1,10 +1,6 @@
 window.addEventListener('DOMContentLoaded', async function() {
     async function get(url) {
-        const resp = await fetch(url, {
-            headers: {
-                'Authorization': `Bearer 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` // Assuming your token needs to be passed as a Bearer token
-            }
-        });
+        const resp = await fetch(url);
         return resp.json();
     }
     const emojis = await get('https://api.github.com/emojis');
